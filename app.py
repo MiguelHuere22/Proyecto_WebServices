@@ -5,7 +5,6 @@ from services.test import tests
 from services.area import areas
 from services.pregunta import preguntas
 from services.respuesta import respuestas  # Importar el blueprint de Respuestas
-from services.predio import predios
 from services.test_amasc import test_amasc_bp
 from services.test_beck import test_beck_bp
 from services.test_zung import test_zung_bp
@@ -24,7 +23,6 @@ app.register_blueprint(tests)
 app.register_blueprint(areas)
 app.register_blueprint(preguntas)
 app.register_blueprint(respuestas)  # Registrar el blueprint de Respuestas
-app.register_blueprint(predios)
 app.register_blueprint(test_amasc_bp)
 app.register_blueprint(test_beck_bp)
 app.register_blueprint(test_zung_bp)

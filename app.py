@@ -41,19 +41,6 @@ with app.app_context():
     logging.info("Creating all database tables")
     db.create_all()
 
-#################### PARA PROBAR SI HAY CONEXIÓN
-@app.route('/check_db')
-def check_db():
-    try:
-        logging.info("Checking database connection")
-        with db.engine.connect() as connection:
-            result = connection.execute(text('SELECT 1'))
-            return 'Database connection successful!', 200
-    except Exception as e:
-        logging.error(f"Database connection failed: {e}")
-        return str(e), 500
-##########################################
-
 if __name__ == '__main__':
     logging.info("Starting Flask application")
     app.run(host='0.0.0.0', port=5000)
